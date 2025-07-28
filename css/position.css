@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #8bd7f032;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-1 {
+    position: static;
+    left: 30px;
+    top: 20px;
+    /* top,left has no effect on static item */
+}
+
+.box-2 {
+    position: relative;
+    left: 40px;
+    top: 20px;
+    /* relative is positioned relative to its normal position */
+}
+
+.box-3 {
+    position: fixed;
+    top: 0;
+    left: 10;
+    z-index: 2;
+    /* fixed is positioned relative to the viewport */
+}
+
+.box-4 {
+    position: sticky;
+    left: 20px;
+    /* sticky is relative + fixed, like freeze pane, pinned while scrolling */
+}
+
+
+.box-5 {
+    width: 400px;
+    height: 400px;
+    right: 0;
+    top: 0;
+    position: fixed;
+}
+
+.box-6 {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    /* absolute is positioned relative to the nearest positioned ancestor i.e. box 5 in this case */
+}
+
+.container {
+    border: 1px solid;
+    margin: 50px 0px;
+}

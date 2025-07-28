@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* set devices' breakpoints as the max-width */
+@media screen and (max-width: 1200px) {
+    .widescreen {
+        background-color: coral;
+    }
+}
+
+@media (max-width: 992px) {
+    .normal {
+        background-color: lightblue;
+    }
+}
+
+@media (max-width: 768px) {
+    .tablet {
+        background-color: lightgreen;
+    }
+}
+
+@media (max-width: 576px) {
+    .smartphone {
+        background: lightcoral;
+    }
+}
+
+@media (orientation: landscape) {
+    .landscape {
+        background-color: gold;
+    }
+}
+
+@media (max-height: 600px) {
+    .height {
+        background-color: cyan;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        background-color: lightgray;
+    }
+}
+/* @media -> body ; @container -> block/container level */
+
+.main {
+    display: flex;
+}
+
+main {
+    container-type: inline-size;
+    container-name: main;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+main p {
+    background-color: lightgreen;
+}
+
+aside {
+    container-type: inline-size;
+    container-name: aside;
+    flex: 0 0 30%;
+/* 0 grow ; 0 shrink; 30% of the container i.e. <aside> */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+@container main (max-width: 992px) {
+    main p {
+        background-color: lightblue;
+        width: 70cqw;
+        height: 50cqh;
+        /* cqw / cqh: % of query container's width or height*/
+    }
+}
+
+@container aside (min-width: 300px) {
+    aside p {
+        background-color: lightgreen;
+    }
+}
+
