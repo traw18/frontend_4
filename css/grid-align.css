@@ -1,0 +1,40 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #f4f4f4;
+    height: 600px;
+}
+
+.item {
+    background-color: coral;
+    padding: 1rem;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(4, 100px);
+    justify-content: space-evenly;
+    align-content: space-around;
+    place-content: space-around;
+    justify-items: right;
+    align-items: end;
+/* "justify" for column spacing (x-axis); "align" for row spacing(y-axis( */
+    place-items: center;
+/* place - shorthand for justify and align*/
+}
